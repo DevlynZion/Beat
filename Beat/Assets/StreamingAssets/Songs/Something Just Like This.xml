@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<song name="Something Just Like This" bpm="103">
+	<bars>
+		<bar>
+			<beat beatNumber="1" yPosition="0.0" beatPrephabName="Beat" hitAudioClipName="" />
+			<beat beatNumber="5" yPosition="0.0" beatPrephabName="Beat" hitAudioClipName="" />
+			<beat beatNumber="7" yPosition="2.0" beatPrephabName="Beat" hitAudioClipName="" />
+      <beat beatNumber="9" yPosition="0.0" beatPrephabName="Beat" hitAudioClipName="" />
+      <beat beatNumber="13" yPosition="2.0" beatPrephabName="Beat" hitAudioClipName="" />
+      <beat beatNumber="15" yPosition="0.0" beatPrephabName="Beat" hitAudioClipName="" />
+		</bar>
+		<bar>
+      <beat beatNumber="1" yPosition="0.0" beatPrephabName="Beat" hitAudioClipName="" />
+      <beat beatNumber="5" yPosition="0.0" beatPrephabName="Beat" hitAudioClipName="" />
+      <beat beatNumber="7" yPosition="2.0" beatPrephabName="Beat" hitAudioClipName="" />
+      <beat beatNumber="9" yPosition="0.0" beatPrephabName="Beat" hitAudioClipName="" />
+      <beat beatNumber="11" yPosition="2.0" beatPrephabName="Beat" hitAudioClipName="" />
+      <beat beatNumber="13" yPosition="0.0" beatPrephabName="Beat" hitAudioClipName="" />
+      <beat beatNumber="15" yPosition="0.0" beatPrephabName="Beat" hitAudioClipName="" />
+		</bar>
+    <bar>
+      <beat beatNumber="1" yPosition="0.0" beatPrephabName="Beat" hitAudioClipName="" />
+      <beat beatNumber="5" yPosition="0.0" beatPrephabName="Beat" hitAudioClipName="" />
+      <beat beatNumber="7" yPosition="2.0" beatPrephabName="Beat" hitAudioClipName="" />
+      <beat beatNumber="9" yPosition="0.0" beatPrephabName="Beat" hitAudioClipName="" />
+      <beat beatNumber="13" yPosition="2.0" beatPrephabName="Beat" hitAudioClipName="" />
+      <beat beatNumber="15" yPosition="0.0" beatPrephabName="Beat" hitAudioClipName="" />
+    </bar>
+    <bar>
+      <beat beatNumber="1" yPosition="0.0" beatPrephabName="Beat" hitAudioClipName="" />
+      <beat beatNumber="5" yPosition="0.0" beatPrephabName="Beat" hitAudioClipName="" />
+      <beat beatNumber="7" yPosition="2.0" beatPrephabName="Beat" hitAudioClipName="" />
+      <beat beatNumber="9" yPosition="0.0" beatPrephabName="Beat" hitAudioClipName="" />
+      <beat beatNumber="11" yPosition="2.0" beatPrephabName="Beat" hitAudioClipName="" />
+      <beat beatNumber="13" yPosition="0.0" beatPrephabName="Beat" hitAudioClipName="" />
+      <beat beatNumber="15" yPosition="0.0" beatPrephabName="Beat" hitAudioClipName="" />
+    </bar>
+
+    <bar>
+      <beat beatNumber="1" yPosition="1.0" beatPrephabName="Beat" hitAudioClipName="" />
+      <beat beatNumber="11" yPosition="3.0" beatPrephabName="Beat" hitAudioClipName="" />
+    </bar>
+    <bar>
+      <beat beatNumber="1" yPosition="1.0" beatPrephabName="Beat" hitAudioClipName="" />
+      <beat beatNumber="11" yPosition="3.0" beatPrephabName="Beat" hitAudioClipName="" />
+    </bar>
+    <bar>
+      <beat beatNumber="1" yPosition="1.0" beatPrephabName="Beat" hitAudioClipName="" />
+      <beat beatNumber="11" yPosition="3.0" beatPrephabName="Beat" hitAudioClipName="" />
+    </bar>
+    <bar>
+      <beat beatNumber="1" yPosition="1.0" beatPrephabName="Beat" hitAudioClipName="" />
+      <beat beatNumber="11" yPosition="3.0" beatPrephabName="Beat" hitAudioClipName="" />
+    </bar>
+
+    <bar>
+      <beat beatNumber="4" yPosition="3.0" beatPrephabName="Beat" hitAudioClipName="" />
+      <beat beatNumber="7" yPosition="3.0" beatPrephabName="Beat" hitAudioClipName="" />
+      <beat beatNumber="13" yPosition="4.0" beatPrephabName="Beat" hitAudioClipName="" />
+    </bar>
+    <bar>
+      <beat beatNumber="4" yPosition="3.0" beatPrephabName="Beat" hitAudioClipName="" />
+      <beat beatNumber="7" yPosition="3.0" beatPrephabName="Beat" hitAudioClipName="" />
+      <beat beatNumber="11" yPosition="3.0" beatPrephabName="Beat" hitAudioClipName="" />
+      <beat beatNumber="13" yPosition="4.0" beatPrephabName="Beat" hitAudioClipName="" />
+    </bar>
+    <bar>
+      <beat beatNumber="4" yPosition="3.0" beatPrephabName="Beat" hitAudioClipName="" />
+      <beat beatNumber="7" yPosition="3.0" beatPrephabName="Beat" hitAudioClipName="" />
+      <beat beatNumber="13" yPosition="4.0" beatPrephabName="Beat" hitAudioClipName="" />
+    </bar>
+    <bar>
+      <beat beatNumber="4" yPosition="3.0" beatPrephabName="Beat" hitAudioClipName="" />
+      <beat beatNumber="7" yPosition="3.0" beatPrephabName="Beat" hitAudioClipName="" />
+      <beat beatNumber="11" yPosition="3.0" beatPrephabName="Beat" hitAudioClipName="" />
+      <beat beatNumber="13" yPosition="4.0" beatPrephabName="Beat" hitAudioClipName="" />
+    </bar>
+    
+    <bar>
+      <beat beatNumber="1" yPosition="1.0" beatPrephabName="Beat" hitAudioClipName="" />
+      <beat beatNumber="11" yPosition="3.0" beatPrephabName="Beat" hitAudioClipName="" />
+    </bar>
+    <bar>
+      <beat beatNumber="1" yPosition="1.0" beatPrephabName="Beat" hitAudioClipName="" />
+      <beat beatNumber="11" yPosition="3.0" beatPrephabName="Beat" hitAudioClipName="" />
+    </bar>
+    <bar>
+      <beat beatNumber="1" yPosition="1.0" beatPrephabName="Beat" hitAudioClipName="" />
+      <beat beatNumber="11" yPosition="3.0" beatPrephabName="Beat" hitAudioClipName="" />
+    </bar>
+    <bar>
+      <beat beatNumber="1" yPosition="1.0" beatPrephabName="Beat" hitAudioClipName="" />
+      <beat beatNumber="11" yPosition="3.0" beatPrephabName="Beat" hitAudioClipName="" />
+    </bar>
+
+    <bar>
+      <beat beatNumber="4" yPosition="3.0" beatPrephabName="Beat" hitAudioClipName="" />
+      <beat beatNumber="7" yPosition="3.0" beatPrephabName="Beat" hitAudioClipName="" />
+      <beat beatNumber="13" yPosition="4.0" beatPrephabName="Beat" hitAudioClipName="" />
+    </bar>
+    <bar>
+      <beat beatNumber="4" yPosition="3.0" beatPrephabName="Beat" hitAudioClipName="" />
+      <beat beatNumber="7" yPosition="3.0" beatPrephabName="Beat" hitAudioClipName="" />
+      <beat beatNumber="11" yPosition="3.0" beatPrephabName="Beat" hitAudioClipName="" />
+      <beat beatNumber="13" yPosition="4.0" beatPrephabName="Beat" hitAudioClipName="" />
+    </bar>
+    <bar>
+      <beat beatNumber="4" yPosition="3.0" beatPrephabName="Beat" hitAudioClipName="" />
+      <beat beatNumber="7" yPosition="3.0" beatPrephabName="Beat" hitAudioClipName="" />
+      <beat beatNumber="13" yPosition="4.0" beatPrephabName="Beat" hitAudioClipName="" />
+    </bar>
+    <bar>
+      <beat beatNumber="4" yPosition="3.0" beatPrephabName="Beat" hitAudioClipName="" />
+      <beat beatNumber="7" yPosition="3.0" beatPrephabName="Beat" hitAudioClipName="" />
+      <beat beatNumber="11" yPosition="3.0" beatPrephabName="Beat" hitAudioClipName="" />
+      <beat beatNumber="13" yPosition="4.0" beatPrephabName="Beat" hitAudioClipName="" />
+    </bar>
+
+    <bar>
+      <beat beatNumber="1" yPosition="1.0" beatPrephabName="Beat" hitAudioClipName="" />
+      <beat beatNumber="11" yPosition="3.0" beatPrephabName="Beat" hitAudioClipName="" />
+    </bar>
+    <bar>
+      <beat beatNumber="1" yPosition="1.0" beatPrephabName="Beat" hitAudioClipName="" />
+      <beat beatNumber="11" yPosition="3.0" beatPrephabName="Beat" hitAudioClipName="" />
+    </bar>
+    <bar>
+      <beat beatNumber="1" yPosition="1.0" beatPrephabName="Beat" hitAudioClipName="" />
+      <beat beatNumber="11" yPosition="3.0" beatPrephabName="Beat" hitAudioClipName="" />
+    </bar>
+    <bar>
+      <beat beatNumber="1" yPosition="1.0" beatPrephabName="Beat" hitAudioClipName="" />
+      <beat beatNumber="11" yPosition="3.0" beatPrephabName="Beat" hitAudioClipName="" />
+    </bar>
+
+    <bar>
+      <beat beatNumber="4" yPosition="3.0" beatPrephabName="Beat" hitAudioClipName="" />
+      <beat beatNumber="7" yPosition="3.0" beatPrephabName="Beat" hitAudioClipName="" />
+      <beat beatNumber="13" yPosition="4.0" beatPrephabName="Beat" hitAudioClipName="" />
+    </bar>
+    <bar>
+      <beat beatNumber="4" yPosition="3.0" beatPrephabName="Beat" hitAudioClipName="" />
+      <beat beatNumber="7" yPosition="3.0" beatPrephabName="Beat" hitAudioClipName="" />
+      <beat beatNumber="11" yPosition="3.0" beatPrephabName="Beat" hitAudioClipName="" />
+      <beat beatNumber="13" yPosition="4.0" beatPrephabName="Beat" hitAudioClipName="" />
+    </bar>
+    <bar>
+      <beat beatNumber="4" yPosition="3.0" beatPrephabName="Beat" hitAudioClipName="" />
+      <beat beatNumber="7" yPosition="3.0" beatPrephabName="Beat" hitAudioClipName="" />
+      <beat beatNumber="13" yPosition="4.0" beatPrephabName="Beat" hitAudioClipName="" />
+    </bar>
+    <bar>
+      <beat beatNumber="4" yPosition="3.0" beatPrephabName="Beat" hitAudioClipName="" />
+      <beat beatNumber="7" yPosition="3.0" beatPrephabName="Beat" hitAudioClipName="" />
+      <beat beatNumber="11" yPosition="3.0" beatPrephabName="Beat" hitAudioClipName="" />
+      <beat beatNumber="13" yPosition="4.0" beatPrephabName="Beat" hitAudioClipName="" />
+    </bar>
+
+    <bar>
+      <beat beatNumber="1" yPosition="-4.0" beatPrephabName="Beat" hitAudioClipName="" />
+      <beat beatNumber="5" yPosition="-4.0" beatPrephabName="Beat" hitAudioClipName="" />
+      <beat beatNumber="9" yPosition="-3.5" beatPrephabName="Beat" hitAudioClipName="" />
+      <beat beatNumber="13" yPosition="-3.5" beatPrephabName="Beat" hitAudioClipName="" />
+      <beat beatNumber="15" yPosition="-3.5" beatPrephabName="Beat" hitAudioClipName="" />
+    </bar>
+    <bar>
+      <beat beatNumber="1" yPosition="-2.0" beatPrephabName="Beat" hitAudioClipName="" />
+      <beat beatNumber="5" yPosition="-2.0" beatPrephabName="Beat" hitAudioClipName="" />
+      <beat beatNumber="7" yPosition="-2.0" beatPrephabName="Beat" hitAudioClipName="" />
+      <beat beatNumber="9" yPosition="-2.0" beatPrephabName="Beat" hitAudioClipName="" />
+      <beat beatNumber="13" yPosition="-3.5" beatPrephabName="Beat" hitAudioClipName="" />
+      <beat beatNumber="15" yPosition="-3.5" beatPrephabName="Beat" hitAudioClipName="" />
+    </bar>
+    <bar>
+      <beat beatNumber="1" yPosition="-4.0" beatPrephabName="Beat" hitAudioClipName="" />
+      <beat beatNumber="5" yPosition="-4.0" beatPrephabName="Beat" hitAudioClipName="" />
+      <beat beatNumber="9" yPosition="-3.5" beatPrephabName="Beat" hitAudioClipName="" />
+      <beat beatNumber="13" yPosition="-3.5" beatPrephabName="Beat" hitAudioClipName="" />
+      <beat beatNumber="15" yPosition="-3.5" beatPrephabName="Beat" hitAudioClipName="" />
+    </bar>
+    <bar>
+      <beat beatNumber="1" yPosition="-2.0" beatPrephabName="Beat" hitAudioClipName="" />
+      <beat beatNumber="5" yPosition="-2.0" beatPrephabName="Beat" hitAudioClipName="" />
+      <beat beatNumber="7" yPosition="-2.0" beatPrephabName="Beat" hitAudioClipName="" />
+      <beat beatNumber="9" yPosition="-2.0" beatPrephabName="Beat" hitAudioClipName="" />
+      <beat beatNumber="13" yPosition="-3.5" beatPrephabName="Beat" hitAudioClipName="" />
+      <beat beatNumber="15" yPosition="-3.5" beatPrephabName="Beat" hitAudioClipName="" />
+    </bar>
+
+    <bar>
+      <beat beatNumber="1" yPosition="-4.0" beatPrephabName="Beat" hitAudioClipName="" />
+      <beat beatNumber="5" yPosition="-4.0" beatPrephabName="Beat" hitAudioClipName="" />
+      <beat beatNumber="9" yPosition="-3.5" beatPrephabName="Beat" hitAudioClipName="" />
+      <beat beatNumber="13" yPosition="-3.5" beatPrephabName="Beat" hitAudioClipName="" />
+      <beat beatNumber="15" yPosition="-3.5" beatPrephabName="Beat" hitAudioClipName="" />
+    </bar>
+    <bar>
+      <beat beatNumber="1" yPosition="-2.0" beatPrephabName="Beat" hitAudioClipName="" />
+      <beat beatNumber="5" yPosition="-2.0" beatPrephabName="Beat" hitAudioClipName="" />
+      <beat beatNumber="7" yPosition="-2.0" beatPrephabName="Beat" hitAudioClipName="" />
+      <beat beatNumber="9" yPosition="-2.0" beatPrephabName="Beat" hitAudioClipName="" />
+      <beat beatNumber="13" yPosition="-3.5" beatPrephabName="Beat" hitAudioClipName="" />
+      <beat beatNumber="15" yPosition="-3.5" beatPrephabName="Beat" hitAudioClipName="" />
+    </bar>
+    <bar>
+      <beat beatNumber="1" yPosition="-4.0" beatPrephabName="Beat" hitAudioClipName="" />
+      <beat beatNumber="5" yPosition="-4.0" beatPrephabName="Beat" hitAudioClipName="" />
+      <beat beatNumber="9" yPosition="-3.5" beatPrephabName="Beat" hitAudioClipName="" />
+      <beat beatNumber="13" yPosition="-3.5" beatPrephabName="Beat" hitAudioClipName="" />
+      <beat beatNumber="15" yPosition="-3.5" beatPrephabName="Beat" hitAudioClipName="" />
+    </bar>
+    <bar>
+      <beat beatNumber="1" yPosition="-2.0" beatPrephabName="Beat" hitAudioClipName="" />
+      <beat beatNumber="5" yPosition="-2.0" beatPrephabName="Beat" hitAudioClipName="" />
+      <beat beatNumber="7" yPosition="-2.0" beatPrephabName="Beat" hitAudioClipName="" />
+      <beat beatNumber="9" yPosition="-2.0" beatPrephabName="Beat" hitAudioClipName="" />
+      <beat beatNumber="13" yPosition="-3.5" beatPrephabName="Beat" hitAudioClipName="" />
+      <beat beatNumber="15" yPosition="-3.5" beatPrephabName="Beat" hitAudioClipName="" />
+    </bar>
+  </bars>
+</song>
