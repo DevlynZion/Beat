@@ -1,0 +1,18 @@
+<xml>
+	<song name="Something Just Like This" bpm="103">
+		<bars>
+			<bar>
+				<beat beatNumber="1" yPosition="0.0" beatPrephabName="Beat" hitAudioClipName="" />
+				<beat beatNumber="2" yPosition="0.0" beatPrephabName="Beat" hitAudioClipName="" />
+				<beat beatNumber="3" yPosition="0.0" beatPrephabName="Beat" hitAudioClipName="" />
+				<beat beatNumber="4" yPosition="0.0" beatPrephabName="Beat" hitAudioClipName="" />
+			</bar>
+			<bar>
+				<beat beatNumber="1" yPosition="0.0" beatPrephabName="Beat" hitAudioClipName="" />
+				<beat beatNumber="5" yPosition="0.0" beatPrephabName="Beat" hitAudioClipName="" />
+				<beat beatNumber="3" yPosition="0.0" beatPrephabName="Beat" hitAudioClipName="" />
+				<beat beatNumber="16" yPosition="0.0" beatPrephabName="Beat" hitAudioClipName="" />
+			</bar>
+		</bars>
+	</song>
+</xml>
