@@ -4,18 +4,22 @@ using UnityEngine;
 
 public class DespawnBorderController : MonoBehaviour
 {
-    void Start()
-    {
-        
-    }
-
-    void Update()
-    {
-        
-    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Destroy(collision.gameObject);
+        if (collision.gameObject.tag == "Beat")
+        {
+            collision.gameObject.SetActive(false);
+            collision.gameObject.GetComponent<BeatController>().Stop();
+        }
+        else if (collision.gameObject.tag == "BeatLine")
+        {
+            collision.gameObject.SetActive(false);
+            collision.gameObject.GetComponent<BeatLineController>().Stop();
+        }
+        else
+        {
+            Destroy(collision.gameObject);
+        }
     }
 
 }

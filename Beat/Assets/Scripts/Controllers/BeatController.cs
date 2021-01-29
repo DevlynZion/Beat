@@ -53,6 +53,12 @@ public class BeatController : MonoBehaviour
 
     public void Shoot()
     {
+        isHitBack = false;
         beatRigidbody.AddForce(new Vector2(-SpeedForward, 0));
+    }
+
+    public void Stop()
+    {
+        beatRigidbody.velocity = Vector3.zero;
     }
 }

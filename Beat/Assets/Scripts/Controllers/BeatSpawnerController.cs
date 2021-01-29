@@ -5,7 +5,6 @@ using UnityEngine.U2D;
 
 public class BeatSpawnerController : MonoBehaviour
 {
-    public GameObject BeatToSpawn;
     public GameObject BeatLineToSpawn;
     public float CollsionSize = 4;
     public float SpawnXPosition = 8.6f;
@@ -19,10 +18,12 @@ public class BeatSpawnerController : MonoBehaviour
     private bool isStart = false;
     private int barIndex = 0;
     private int beatIndex = 0;
-    private int beatNumber = 1;    
+    private int beatNumber = 1;
+    private ObjectPooler objectPooler;
 
     void Start()
     {
+        objectPooler = ObjectPooler.Instance;
         var songLoader = Object.FindObjectOfType<SongLoaderController>();
         song = songLoader.LoadSong(SongName);
 
@@ -38,11 +39,11 @@ public class BeatSpawnerController : MonoBehaviour
         var lengthOf1Bar = lengthOf1Beat * 4;
         var lengthOf8thBeat = lengthOf1Beat / 4;
 
-        InvokeRepeating("Spawn", 2, lengthOf8thBeat);
+        InvokeRepeating("SpawnBeats", 2, lengthOf8thBeat);
     }
 
 
-    void Spawn()
+    void SpawnBeats()
     {
         SpawnBeatline();
 
@@ -51,13 +52,12 @@ public class BeatSpawnerController : MonoBehaviour
 
         if (beat.BeatNumber == beatNumber)
         {
-            var newSpawnBeat = Instantiate(beat.BeatPrephab, new Vector3(SpawnXPosition, beat.YPosition, 0), Quaternion.identity);
-            var beatController = newSpawnBeat.GetComponent<BeatController>();
-            beatController.HitAudioClip = beat.HitAudioClip;
+            var newSpawnBeat = objectPooler.GetFromPool<BeatController>(beat.BeatPrephabName, new Vector3(SpawnXPosition, beat.YPosition, 0), Quaternion.identity);
+            newSpawnBeat.HitAudioClip = beat.HitAudioClip;
 
-            beatController.Initialize();
+            newSpawnBeat.Initialize();
 
-            beatController.Shoot();
+            newSpawnBeat.Shoot();
             beatIndex++;
 
             if (beatIndex >= bar.Beats.Count)
@@ -71,15 +71,13 @@ public class BeatSpawnerController : MonoBehaviour
             beatIndex = 0;
             barIndex++;
 
-            Debug.Log(string.Format("Bar {0}", barIndex + 1));
-
             if (barIndex >= song.Bars.Count)
                 CancelInvoke();
         }
     }
     void SpawnBeatline()
     {
-        var newSpawnBeatline = Instantiate(BeatLineToSpawn, new Vector3(SpawnXPosition, 0, 0), Quaternion.identity);
+        var newSpawnBeatline = objectPooler.GetFromPool("BeatLine", new Vector3(SpawnXPosition, 0, 0), Quaternion.identity);
         var beatLineController = newSpawnBeatline.GetComponent<BeatLineController>();
         var beatLineRenderer = newSpawnBeatline.GetComponent<SpriteRenderer>();
 

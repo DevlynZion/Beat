@@ -20,10 +20,16 @@ public class BeatLineController : MonoBehaviour
         beatRigidbody.AddForce(new Vector2(-SpeedForward, 0));
     }
 
+    public void Stop()
+    {
+        beatRigidbody.velocity = Vector2.zero;
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player")
         {
+            // TODO: Make this solution clear
             BeatSpawnerController beatSpawnerController = Object.FindObjectOfType<BeatSpawnerController>();
             beatSpawnerController.StarMusic();
 

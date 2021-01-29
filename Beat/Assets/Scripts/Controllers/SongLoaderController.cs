@@ -9,9 +9,7 @@ using UnityEngine;
 
 public class SongLoaderController : MonoBehaviour
 {
-    public List<Prephab> BeatPrephabs;
     public List<BeatClip> BeatClips;
-
 
     public Song LoadSong(string SongName)
     {
@@ -29,13 +27,11 @@ public class SongLoaderController : MonoBehaviour
 
                 beat.BeatNumber = beatData.BeatNumber;
 
-                var prephab = BeatPrephabs.Where(p => p.PrephabName == beatData.BeatPrephabName).First();
-                if (prephab != null)
-                    beat.BeatPrephab = prephab.PrephabObject;
+                beat.BeatPrephabName = beatData.BeatPrephabName;
 
-                var beatClip = BeatClips.Where(c => c.BeatClipName == beatData.HitAudioClipName).FirstOrDefault();
+                var beatClip = FindBeatClipAudioClip(beatData.HitAudioClipName);
                 if (beatClip != null)
-                    beat.HitAudioClip = beatClip.BeatAudioClip;
+                    beat.HitAudioClip = beatClip;
 
                 beat.YPosition = beatData.YPosition;
 
@@ -115,60 +111,6 @@ public class SongLoaderController : MonoBehaviour
         }
 
         return songData;
-    }
-
-    public void SaveSong(Song Song)
-    {
-        var songData = new SongData();
-
-        foreach(var bar in Song.Bars)
-        {
-            var barData = new BarData();
-
-            foreach (var beat in bar.Beats)
-            {
-                var beatData = new BeatData();
-
-                beatData.BeatNumber = beat.BeatNumber;
-
-                var prephab = BeatPrephabs.Where(p => p.PrephabObject == beat.BeatPrephab).First();
-                if (prephab != null)
-                    beatData.BeatPrephabName = prephab.PrephabName;
-
-                var beatClip = BeatClips.Where(c => c.BeatAudioClip == beat.HitAudioClip).First();
-                if (beatClip != null)
-                    beatData.HitAudioClipName = beatClip.BeatClipName;
-
-                beatData.YPosition = beat.YPosition;
-
-
-                barData.Beats.Add(beatData);
-            }
-
-            songData.Bars.Add(barData);
-        }
-
-        SaveSong(songData);
-    }
-
-    public void SaveSong(SongData songData)
-    {
-        BinaryFormatter formatter = new BinaryFormatter();
-        var path = Application.persistentDataPath + songData.SongName + ".bin";
-        FileStream stream = new FileStream(path, FileMode.Create);
-
-        formatter.Serialize(stream, songData);
-        stream.Close();
-    }
-
-
-    public GameObject FindPrephabGameObject(string PrephabName)
-    {
-        var prephab = BeatPrephabs.Where(p => p.PrephabName == PrephabName).First();
-        if (prephab != null)
-            return prephab.PrephabObject;
-        else
-            return null;
     }
 
     public AudioClip FindBeatClipAudioClip(string BeatClipName)

@@ -7,7 +7,7 @@ using UnityEngine;
 public class Beat
 {
     public int BeatNumber;
-    public GameObject BeatPrephab;
+    public string BeatPrephabName;
     public AudioClip HitAudioClip;
     public float YPosition;
 

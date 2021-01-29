@@ -8,6 +8,7 @@ TagManager:
   - Despawn Border
   - Returned Border
   - Beat
+  - BeatLine
   layers:
   - Default
   - TransparentFX
