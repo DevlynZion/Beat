@@ -156,7 +156,7 @@
 			<beat beatNumber="11" yPosition="3.0" beatPrephabName="Beat" hitAudioClipName="Clap1" />
 			<beat beatNumber="13" yPosition="4.0" beatPrephabName="Beat" hitAudioClipName="Clap2" />
 		</bar>
-		<!--block 8-->
+		<!--block 8 (This one next)-->
 		<bar>
 			<beat beatNumber="1" yPosition="-4.0" beatPrephabName="Beat" hitAudioClipName="" />
 			<beat beatNumber="5" yPosition="-4.0" beatPrephabName="Beat" hitAudioClipName="" />
