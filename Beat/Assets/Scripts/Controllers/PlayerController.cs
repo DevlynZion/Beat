@@ -16,7 +16,7 @@ public class PlayerController : MonoBehaviour
         playerRigidbody = GetComponent<Rigidbody2D>();
     }
 
-    void Update()
+    void FixedUpdate()
     {
         //float mouseYvalue =  CrossPlatformInputManager.GetAxis("Vertical");
 

@@ -43,7 +43,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a80e7c7ed2f58c4da601f6c23138ad7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BeatPrephabs:
-  - PrephabName: Beat
-    PrephabObject: {fileID: 7696311291463322085, guid: c3373c3b6266ff34aba0c8c1564c54e3,
-      type: 3}
+  BeatClips:
+  - BeatClipName: Panio1
+    BeatAudioClip: {fileID: 8300000, guid: 41c88deaf6b188f4d8b56cff22d009ab, type: 3}
+  - BeatClipName: Panio2
+    BeatAudioClip: {fileID: 8300000, guid: 3723ec1796a00af4a88a9dcf9fea309c, type: 3}
+  - BeatClipName: Panio3
+    BeatAudioClip: {fileID: 8300000, guid: 0c76c515ab24f4c40809acb50ab30a31, type: 3}
+  - BeatClipName: Panio4
+    BeatAudioClip: {fileID: 8300000, guid: fead3cdfa2fbb9b4887ae13ec2599ca5, type: 3}
+  - BeatClipName: Panio5
+    BeatAudioClip: {fileID: 8300000, guid: 8fe06dba4af2176459b7f3b38a83c7d9, type: 3}
+  - BeatClipName: Panio6
+    BeatAudioClip: {fileID: 8300000, guid: cee589d59e32ab840be9378a6d166df5, type: 3}
+  - BeatClipName: Clap1
+    BeatAudioClip: {fileID: 8300000, guid: 8332eb3a13024614da10ffd7da616e34, type: 3}
+  - BeatClipName: Clap1
+    BeatAudioClip: {fileID: 8300000, guid: 27182862fe4d7f54690d1f6c33f38860, type: 3}

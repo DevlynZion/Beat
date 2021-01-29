@@ -5514,7 +5514,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CollsionSize: 4
-  PlayerMoveForce: 800
+  PlayerMoveForce: 700
 --- !u!61 &913804397
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5730,12 +5730,13 @@ MonoBehaviour:
     type: 3}
   CollsionSize: 4
   SpawnXPosition: 8.6
-  MusicAudioClip: {fileID: 8300000, guid: 1f4a847788051744a8017e2f6e7a749d, type: 3}
+  MusicAudioClip: {fileID: 8300000, guid: 0c1aba9089a58d64bb8aff4001c47748, type: 3}
   BPM: 103
   song:
     SongName: 
     Bars: []
   IsDebug: 0
+  IsFlattenBeats: 0
   SongName: Something Just Like This
 --- !u!4 &974137273
 Transform:
@@ -5931,7 +5932,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be8e1cd1c24f5b648ad856a65cb81189, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MissAudioClip: {fileID: 8300000, guid: 82844199c1b50a742ba5413ed988cc2b, type: 3}
+  MissAudioClip: {fileID: 0}
 --- !u!1 &1863001615
 GameObject:
   m_ObjectHideFlags: 0
@@ -6235,6 +6236,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6716380049647141281, guid: 0cdb6d5200cb0b24db8c5e3e972f9e90,
+        type: 3}
+      propertyPath: BeatClips.Array.data[7].BeatClipName
+      value: Clap2
+      objectReference: {fileID: 0}
     - target: {fileID: 6716380049647141283, guid: 0cdb6d5200cb0b24db8c5e3e972f9e90,
         type: 3}
       propertyPath: m_Name
@@ -6267,7 +6273,7 @@ PrefabInstance:
     - target: {fileID: 8251432038845503452, guid: cc48491af41234347ad8b1b667f2dfa3,
         type: 3}
       propertyPath: Pools.Array.data[1].Size
-      value: 16
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 8251432038845503452, guid: cc48491af41234347ad8b1b667f2dfa3,
         type: 3}

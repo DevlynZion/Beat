@@ -7,6 +7,7 @@ public class MissBorderController : MonoBehaviour
     public AudioClip MissAudioClip;
 
     protected AudioSource missSound;
+
     void Start()
     {
         missSound = gameObject.AddComponent<AudioSource>();
@@ -17,6 +18,9 @@ public class MissBorderController : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Beat")
-            missSound.Play();
+        {
+            if (missSound != null)
+                missSound.Play();
+        }
     }
 }

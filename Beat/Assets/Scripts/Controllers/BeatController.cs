@@ -9,19 +9,26 @@ public class BeatController : MonoBehaviour
     public float SpeedBackwards = 500;
     public AudioClip HitAudioClip;
     public AudioClip ReturnAudioClip;
+    public float Volume = 1.0f;
 
     protected Rigidbody2D beatRigidbody;
     protected AudioSource hitSound;
     protected AudioSource returnSound;
     protected bool isHitBack = false;
-
     public void Initialize()
     {
+        var audioSources = gameObject.GetComponents<AudioSource>();
+
+        if (audioSources != null)
+            foreach (var audioSource in audioSources)
+                Destroy(audioSource);
+
         if (HitAudioClip != null)
         {
             hitSound = gameObject.AddComponent<AudioSource>();
             hitSound.playOnAwake = false;
             hitSound.clip = HitAudioClip;
+            hitSound.volume = Volume;
         }
 
         if (ReturnAudioClip != null)
@@ -29,6 +36,7 @@ public class BeatController : MonoBehaviour
             returnSound = gameObject.AddComponent<AudioSource>();
             returnSound.playOnAwake = false;
             returnSound.clip = ReturnAudioClip;
+            returnSound.volume = Volume;
         }
 
         beatRigidbody = GetComponent<Rigidbody2D>();

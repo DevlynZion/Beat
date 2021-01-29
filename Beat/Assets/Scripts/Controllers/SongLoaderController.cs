@@ -32,8 +32,11 @@ public class SongLoaderController : MonoBehaviour
                 var beatClip = FindBeatClipAudioClip(beatData.HitAudioClipName);
                 if (beatClip != null)
                     beat.HitAudioClip = beatClip;
+                else if(beatData.HitAudioClipName != "")
+                    Debug.LogError(string.Format("Beat HitAudioClipName '{0}' does not have an AudioClip", beatData.HitAudioClipName));
 
                 beat.YPosition = beatData.YPosition;
+                beat.Volume = beatData.Volume;
 
                 bar.Beats.Add(beat);
             }
@@ -87,7 +90,7 @@ public class SongLoaderController : MonoBehaviour
                     var beatAttributes = beatNode.Attributes;
 
                     int beatNumber;
-                    if (int.TryParse(beatAttributes["beatNumber"].Value, out beatNumber))
+                    if (int.TryParse(SafeGetValue(beatAttributes, "beatNumber"), out beatNumber))
                         beat.BeatNumber = beatNumber;
 
                     System.Globalization.NumberFormatInfo nf = new System.Globalization.NumberFormatInfo()
@@ -96,12 +99,24 @@ public class SongLoaderController : MonoBehaviour
                     };
 
                     float yPosition;
-                    yPosition = float.Parse(beatAttributes["yPosition"].Value, nf);
+                    yPosition = float.Parse(SafeGetValue(beatAttributes, "yPosition"), nf);
                     beat.YPosition = yPosition;
 
+                    float volume;
+                    var volumeString = SafeGetValue(beatAttributes, "volume");
+                    if (volumeString != null)
+                    {
+                        volume = float.Parse(volumeString, nf);
+                        beat.Volume = volume;
+                    }
+                    else
+                    {
+                        beat.Volume = 1.0f;
+                    }
 
-                    beat.BeatPrephabName = beatAttributes["beatPrephabName"].Value;
-                    beat.HitAudioClipName = beatAttributes["hitAudioClipName"].Value;
+
+                    beat.BeatPrephabName = SafeGetValue(beatAttributes, "beatPrephabName");
+                    beat.HitAudioClipName = SafeGetValue(beatAttributes, "hitAudioClipName");
 
                     bar.Beats.Add(beat);
                 }
@@ -111,6 +126,16 @@ public class SongLoaderController : MonoBehaviour
         }
 
         return songData;
+    }
+
+    private string SafeGetValue(XmlAttributeCollection attributes, string name)
+    {
+        var attribute = attributes[name];
+
+        if (attribute != null)
+            return attribute.Value;
+        else
+            return null;
     }
 
     public AudioClip FindBeatClipAudioClip(string BeatClipName)

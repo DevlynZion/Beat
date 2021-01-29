@@ -12,6 +12,7 @@ public class BeatSpawnerController : MonoBehaviour
     public float BPM = 100; // just 4/4 for now
     public Song song;
     public bool IsDebug = false;
+    public bool IsFlattenBeats = false;
     public string SongName;
 
     private AudioSource MusicSound;
@@ -39,7 +40,7 @@ public class BeatSpawnerController : MonoBehaviour
         var lengthOf1Bar = lengthOf1Beat * 4;
         var lengthOf8thBeat = lengthOf1Beat / 4;
 
-        InvokeRepeating("SpawnBeats", 2, lengthOf8thBeat);
+        InvokeRepeating("SpawnBeats", 4, lengthOf8thBeat);
     }
 
 
@@ -52,8 +53,15 @@ public class BeatSpawnerController : MonoBehaviour
 
         if (beat.BeatNumber == beatNumber)
         {
-            var newSpawnBeat = objectPooler.GetFromPool<BeatController>(beat.BeatPrephabName, new Vector3(SpawnXPosition, beat.YPosition, 0), Quaternion.identity);
+            Vector3 position;
+            if (IsFlattenBeats)
+                position = new Vector3(SpawnXPosition, 0, 0);
+            else
+                position = new Vector3(SpawnXPosition, beat.YPosition, 0);
+
+            var newSpawnBeat = objectPooler.GetFromPool<BeatController>(beat.BeatPrephabName, position, Quaternion.identity);
             newSpawnBeat.HitAudioClip = beat.HitAudioClip;
+            newSpawnBeat.Volume = beat.Volume;
 
             newSpawnBeat.Initialize();
 

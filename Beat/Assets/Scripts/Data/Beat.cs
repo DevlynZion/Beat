@@ -10,5 +10,6 @@ public class Beat
     public string BeatPrephabName;
     public AudioClip HitAudioClip;
     public float YPosition;
+    public float Volume;
 
 }
