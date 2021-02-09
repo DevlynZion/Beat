@@ -70,3 +70,25 @@ MonoBehaviour:
     BeatAudioClip: {fileID: 8300000, guid: b657a78a6d8de574dac30f01b729d8fc, type: 3}
   - BeatClipName: DrumRoll4
     BeatAudioClip: {fileID: 8300000, guid: 740373b429cb74e4ba7b734e4e47a333, type: 3}
+  - BeatClipName: Kick1
+    BeatAudioClip: {fileID: 8300000, guid: 238714163f35d564bb4b428f443ed3e5, type: 3}
+  - BeatClipName: HighPanio1
+    BeatAudioClip: {fileID: 8300000, guid: 91c0a965f5ff9064a84595ce862b8c9d, type: 3}
+  - BeatClipName: HighPanio2
+    BeatAudioClip: {fileID: 8300000, guid: 0eb048c061250b345942e8997375687c, type: 3}
+  - BeatClipName: HighPanio3
+    BeatAudioClip: {fileID: 8300000, guid: 7c1948f83b09f024393af2f2790757c5, type: 3}
+  - BeatClipName: HighPanio4
+    BeatAudioClip: {fileID: 8300000, guid: 39d91eaf661eb474c93735baf4ee8d98, type: 3}
+  - BeatClipName: HighPanio5
+    BeatAudioClip: {fileID: 8300000, guid: 648cd2c0890b92e4c8de8051ce23885c, type: 3}
+  - BeatClipName: HighPanio6
+    BeatAudioClip: {fileID: 8300000, guid: 2cf6446735328ec499d67785f3ddf10b, type: 3}
+  - BeatClipName: HighPanio7
+    BeatAudioClip: {fileID: 8300000, guid: b885f5502c7475c45955f9b4cdb89020, type: 3}
+  - BeatClipName: HighPanio8
+    BeatAudioClip: {fileID: 8300000, guid: 34872f6e63cb96545b25c7dd4638ca15, type: 3}
+  - BeatClipName: HighPanio9
+    BeatAudioClip: {fileID: 8300000, guid: 45646c8a90cd42c438460583d5d84108, type: 3}
+  - BeatClipName: HighPanio10
+    BeatAudioClip: {fileID: 8300000, guid: fbd42f847b1d08747b1da53cfb9654d7, type: 3}
