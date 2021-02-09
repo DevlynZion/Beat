@@ -58,5 +58,15 @@ MonoBehaviour:
     BeatAudioClip: {fileID: 8300000, guid: cee589d59e32ab840be9378a6d166df5, type: 3}
   - BeatClipName: Clap1
     BeatAudioClip: {fileID: 8300000, guid: 8332eb3a13024614da10ffd7da616e34, type: 3}
-  - BeatClipName: Clap1
+  - BeatClipName: Clap2
     BeatAudioClip: {fileID: 8300000, guid: 27182862fe4d7f54690d1f6c33f38860, type: 3}
+  - BeatClipName: DrumRoll1-S
+    BeatAudioClip: {fileID: 8300000, guid: 94eecf4ffd148b04c978f31f79a54c3e, type: 3}
+  - BeatClipName: DrumRoll1
+    BeatAudioClip: {fileID: 8300000, guid: 6fb49f67f0bc31149bcce6edef2df741, type: 3}
+  - BeatClipName: DrumRoll2
+    BeatAudioClip: {fileID: 8300000, guid: 03399c6b02f84804ca453a54f46b026b, type: 3}
+  - BeatClipName: DrumRoll3
+    BeatAudioClip: {fileID: 8300000, guid: b657a78a6d8de574dac30f01b729d8fc, type: 3}
+  - BeatClipName: DrumRoll4
+    BeatAudioClip: {fileID: 8300000, guid: 740373b429cb74e4ba7b734e4e47a333, type: 3}

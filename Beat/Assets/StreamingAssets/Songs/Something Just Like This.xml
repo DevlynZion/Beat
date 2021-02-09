@@ -153,11 +153,20 @@
 		<bar>
 			<beat beatNumber="4" yPosition="3.0" beatPrephabName="Beat" hitAudioClipName="Clap1" />
 			<beat beatNumber="7" yPosition="3.0" beatPrephabName="Beat" hitAudioClipName="Clap1" />
-			<beat beatNumber="11" yPosition="3.0" beatPrephabName="Beat" hitAudioClipName="Clap1" />
-			<beat beatNumber="13" yPosition="4.0" beatPrephabName="Beat" hitAudioClipName="Clap2" />
+			<beat beatNumber="9" yPosition="2.0" beatPrephabName="Beat" hitAudioClipName="DrumRoll1" />
+			<beat beatNumber="10" yPosition="1.0" beatPrephabName="Beat" hitAudioClipName="DrumRoll1-S" />
+			<beat beatNumber="11" yPosition="0.0" beatPrephabName="Beat" hitAudioClipName="DrumRoll2" />
+			<beat beatNumber="11" yPosition="-0.5" beatPrephabName="Beat" hitAudioClipName="Clap1" />
+			<beat beatNumber="12" yPosition="-1.0" beatPrephabName="Beat" hitAudioClipName="DrumRoll2" />
+			<beat beatNumber="13" yPosition="-1.5" beatPrephabName="Beat" hitAudioClipName="DrumRoll2" />
+			<beat beatNumber="13" yPosition="-1.6" beatPrephabName="Beat" hitAudioClipName="Clap2" />
+			<beat beatNumber="14" yPosition="-2" beatPrephabName="Beat" hitAudioClipName="DrumRoll3" />
+			<beat beatNumber="15" yPosition="-2.5" beatPrephabName="Beat" hitAudioClipName="DrumRoll3" />
+			<beat beatNumber="16" yPosition="-3" beatPrephabName="Beat" hitAudioClipName="DrumRoll3" />
 		</bar>
 		<!--block 8 (This one next)-->
 		<bar>
+			<beat beatNumber="1" yPosition="-3.5" beatPrephabName="Beat" hitAudioClipName="DrumRoll4" />
 			<beat beatNumber="1" yPosition="-4.0" beatPrephabName="Beat" hitAudioClipName="" />
 			<beat beatNumber="5" yPosition="-4.0" beatPrephabName="Beat" hitAudioClipName="" />
 			<beat beatNumber="9" yPosition="-3.5" beatPrephabName="Beat" hitAudioClipName="" />

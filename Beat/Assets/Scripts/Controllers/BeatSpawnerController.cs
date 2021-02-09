@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.U2D;
 
@@ -18,7 +19,6 @@ public class BeatSpawnerController : MonoBehaviour
     private AudioSource MusicSound;
     private bool isStart = false;
     private int barIndex = 0;
-    private int beatIndex = 0;
     private int beatNumber = 1;
     private ObjectPooler objectPooler;
 
@@ -49,34 +49,33 @@ public class BeatSpawnerController : MonoBehaviour
         SpawnBeatline();
 
         var bar = song.Bars[barIndex];
-        var beat = bar.Beats[beatIndex];
 
-        if (beat.BeatNumber == beatNumber)
+        var beatsToShoot = bar.Beats.Where(b => b.BeatNumber == beatNumber);
+
+        if (beatsToShoot.Count() > 0)
         {
-            Vector3 position;
-            if (IsFlattenBeats)
-                position = new Vector3(SpawnXPosition, 0, 0);
-            else
-                position = new Vector3(SpawnXPosition, beat.YPosition, 0);
+            foreach (var beat in beatsToShoot)
+            {
+                Vector3 position;
+                if (IsFlattenBeats)
+                    position = new Vector3(SpawnXPosition, 0, 0);
+                else
+                    position = new Vector3(SpawnXPosition, beat.YPosition, 0);
 
-            var newSpawnBeat = objectPooler.GetFromPool<BeatController>(beat.BeatPrephabName, position, Quaternion.identity);
-            newSpawnBeat.HitAudioClip = beat.HitAudioClip;
-            newSpawnBeat.Volume = beat.Volume;
+                var newSpawnBeat = objectPooler.GetFromPool<BeatController>(beat.BeatPrephabName, position, Quaternion.identity);
+                newSpawnBeat.HitAudioClip = beat.HitAudioClip;
+                newSpawnBeat.Volume = beat.Volume;
 
-            newSpawnBeat.Initialize();
+                newSpawnBeat.Initialize();
 
-            newSpawnBeat.Shoot();
-            beatIndex++;
-
-            if (beatIndex >= bar.Beats.Count)
-                beatIndex = 0;
+                newSpawnBeat.Shoot();
+            }
         }        
 
         beatNumber++;
         if (beatNumber > 16)
         {
             beatNumber = 1;
-            beatIndex = 0;
             barIndex++;
 
             if (barIndex >= song.Bars.Count)

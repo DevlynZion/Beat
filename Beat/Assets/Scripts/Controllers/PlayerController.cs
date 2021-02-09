@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
 {
     public float CollsionSize = 4;
     public float PlayerMoveForce = 50;
+    public bool IsLongPlayer = false;
 
     private Rigidbody2D playerRigidbody;
     private float previousDirection;
@@ -14,6 +15,11 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         playerRigidbody = GetComponent<Rigidbody2D>();
+        if(IsLongPlayer)
+        {
+            var boxCollider2D = GetComponent<BoxCollider2D>();
+            boxCollider2D.size = new Vector2(boxCollider2D.size.x, 20);
+        }
     }
 
     void FixedUpdate()
