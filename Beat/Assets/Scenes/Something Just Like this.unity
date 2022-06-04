@@ -5515,7 +5515,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CollsionSize: 4
   PlayerMoveForce: 700
-  IsLongPlayer: 1
+  IsLongPlayer: 0
 --- !u!61 &913804397
 BoxCollider2D:
   m_ObjectHideFlags: 0
