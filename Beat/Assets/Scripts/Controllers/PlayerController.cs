@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D playerRigidbody;
     private float previousDirection;
 
-    void Start()
+    private void Start()
     {
         playerRigidbody = GetComponent<Rigidbody2D>();
         if (IsLongPlayer)
@@ -23,35 +23,36 @@ public class PlayerController : MonoBehaviour
     }
 
     // TODO: still trying to find good controls to use
-    void FixedUpdate()
+    private void FixedUpdate()
     {
+        MouseMove();
         //TouchMove();
         //ButtonMove();
-        KeybordMove();
+        //KeybordMove();
     }
 
     private void ButtonMove()
     {
-        //float mouseYvalue =  CrossPlatformInputManager.GetAxis("Vertical");
+        float mouseYvalue = CrossPlatformInputManager.GetAxis("Vertical");
 
-        //var newPos = transform.position.y + mouseYvalue;
+        var newPos = transform.position.y + mouseYvalue;
 
-        //if ((newPos <= CollsionSize) && (newPos >= -CollsionSize))
-        //{
-        //   transform.Translate(0, mouseYvalue, 0);
+        if ((newPos <= CollsionSize) && (newPos >= -CollsionSize))
+        {
+            transform.Translate(0, mouseYvalue, 0);
 
-        //}
-        //else if (newPos >= CollsionSize)
-        //{
-        //    newPos = CollsionSize;
-        //}
-        //else
-        //{
-        //    newPos = -CollsionSize;
-        //}
+        }
+        else if (newPos >= CollsionSize)
+        {
+            newPos = CollsionSize;
+        }
+        else
+        {
+            newPos = -CollsionSize;
+        }
 
-        //var direction = Mathf.Clamp(CrossPlatformInputManager.GetAxis("Vertical"), -1, 1);
-        var direction = CrossPlatformInputManager.GetAxis("Vertical");
+        var direction = Mathf.Clamp(CrossPlatformInputManager.GetAxis("Vertical"), -1, 1);
+        //var direction = CrossPlatformInputManager.GetAxis("Vertical");
 
 
         if (direction != 0.0f)
@@ -99,5 +100,28 @@ public class PlayerController : MonoBehaviour
             playerRigidbody.velocity = Vector2.zero;
         }
 
+    }
+
+    private void MouseMove()
+    {
+        Vector3 mousePosition = Input.mousePosition;
+
+        var newPos = transform.position.y + mousePosition.y;
+
+        if ((newPos <= CollsionSize) && (newPos >= -CollsionSize))
+        {
+            //transform.Translate(0, newPos, 0);
+
+        }
+        else if (newPos >= CollsionSize)
+        {
+            newPos = CollsionSize;
+        }
+        else
+        {
+            newPos = -CollsionSize;
+        }
+
+        transform.Translate(0, newPos, 0);
     }
 }
