@@ -7,51 +7,78 @@ public class PlayerController : MonoBehaviour
 {
     public float CollsionSize = 4;
     public float PlayerMoveForce = 50;
+    public float InputSensitivity = 0.5f;
+    public bool IsLongPlayer = false;
 
     private Rigidbody2D playerRigidbody;
     private float previousDirection;
 
-    void Start()
+    private void Start()
     {
+        Cursor.lockState = CursorLockMode.Confined;
+        Cursor.visible = false;
         playerRigidbody = GetComponent<Rigidbody2D>();
+        if (IsLongPlayer)
+        {
+            var boxCollider2D = GetComponent<BoxCollider2D>();
+            boxCollider2D.size = new Vector2(boxCollider2D.size.x, 20);
+        }
     }
 
-    void FixedUpdate()
+    
+    private void FixedUpdate()
     {
-        //float mouseYvalue =  CrossPlatformInputManager.GetAxis("Vertical");
+        MouseMove();
+        //TouchMove();
+        //KeybordMove();
+    }
 
-        //var newPos = transform.position.y + mouseYvalue;
-
-        //if ((newPos <= CollsionSize) && (newPos >= -CollsionSize))
-        //{
-        //   transform.Translate(0, mouseYvalue, 0);
-
-        //}
-        //else if (newPos >= CollsionSize)
-        //{
-        //    newPos = CollsionSize;
-        //}
-        //else
-        //{
-        //    newPos = -CollsionSize;
-        //}
-
-        //var direction = Mathf.Clamp(CrossPlatformInputManager.GetAxis("Vertical"), -1, 1);
-        var direction = CrossPlatformInputManager.GetAxis("Vertical");
-
-
-        if (direction != 0.0f)
+ 
+    private void TouchMove()
+    {
+        if (Input.touchCount > 0)
         {
-            //if (previousDirection != direction)
-            //    playerRigidbody.velocity = Vector2.zero;
+            Touch touch = Input.GetTouch(0); // get first touch since touch count is greater than zero
 
-            playerRigidbody.AddForce(new Vector2(0, direction * PlayerMoveForce), ForceMode2D.Impulse);
+            if (touch.phase == TouchPhase.Stationary || touch.phase == TouchPhase.Moved)
+            {
+                // get the touch position from the screen touch to world point
+                Vector3 touchedPos = Camera.main.ScreenToWorldPoint(new Vector3(touch.position.x, touch.position.y, 10));
+                // lerp and set the position of the current object to that of the touch, but smoothly over time.
+                transform.position = new Vector3(transform.position.x, Mathf.Lerp(transform.position.y, touchedPos.y, Time.deltaTime), 0);
+            }
+        }
+    }
 
-            previousDirection = direction;
+    private void KeybordMove()
+    {
+        var moveBy = Input.GetAxis("Vertical");
+
+        if (moveBy != 0.0f)
+        {
+            playerRigidbody.AddForce(new Vector2(0, moveBy * PlayerMoveForce), ForceMode2D.Impulse);
+
+            previousDirection = moveBy;
         }
         else
         {
             playerRigidbody.velocity = Vector2.zero;
         }
+    }
+
+    
+    private void MouseMove()
+    {          
+        var deltaY = Input.GetAxis("Mouse Y");
+
+#if !UNITY_EDITOR
+        deltaY = deltaY * InputSensitivity;
+#endif
+
+        var newPos = transform.position.y + deltaY;
+
+        newPos = Mathf.Clamp(newPos, -CollsionSize, CollsionSize);        
+
+        transform.transform.position = new Vector3(transform.transform.position.x, newPos, 0);
     }
 }
